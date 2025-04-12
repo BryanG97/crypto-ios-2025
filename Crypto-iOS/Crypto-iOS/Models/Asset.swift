@@ -1,12 +1,13 @@
 import Foundation
-struct Asset: Decodable, Identifiable {
+
+struct Asset: Decodable, Identifiable, Equatable {
     let id: String
     let name: String
     let symbol: String
     let priceUsd: String
     let changePercent24Hr: String
     
-    var percentage: Double{
+    /*var percentage: Double{
         Double(changePercent24Hr) ?? 0
     }
     
@@ -21,6 +22,6 @@ struct Asset: Decodable, Identifiable {
     var iconUrl: URL?{
         URL(string:
                 "https://assets.coincap.io/assets/icons/\(symbol.lowercased())@2x.png")
-    }
+    }*/
 }
 

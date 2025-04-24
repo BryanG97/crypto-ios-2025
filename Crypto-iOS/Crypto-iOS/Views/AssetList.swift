@@ -8,11 +8,13 @@ struct Assetlist: View{
     
     var body: some View{
         NavigationStack{
+            
             Text(viewModel.errorMessage ?? "")
+            
             List {
                 ForEach(viewModel.assets) { asset in
                     NavigationLink {
-                        AssetDetailView(asset: asset)
+                        AssetDetailView(viewModel: .init(asset: asset))
                     } label: {
                         AssetView(assetViewState: .init(asset))
                     }

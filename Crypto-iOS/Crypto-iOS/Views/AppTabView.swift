@@ -11,7 +11,7 @@ struct AppTabView: View{
                 Text("Favourites")
             }
             Tab("Settings", systemImage: "gear"){
-                Text("Settings")
+                SettingsView()
             }
         }
         
